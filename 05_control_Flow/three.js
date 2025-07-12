@@ -46,6 +46,7 @@ for (const key in object) {
 const programming = ["C","C++","JavaScript","Python","ruby"]
 
 for (const key in programming) {
-    console.log(key); // this will print the index of the array
+    // console.log(key); // this will print the index of the array
     console.log(programming[key]); // this will print the value of the array at that index
+
 }
