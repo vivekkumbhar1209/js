@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai or code | DOM</title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+    <ul class="language">
+        <li>JavaScript</li>
+
+    </ul>
+    
+</body>
+<script>
+    function addLanguage(langName) {
+    const li = document.createElement('li');
+    li.innerHTML = `${langName}`
+    document.querySelector('.language').appendChild(li); // Append the new list item to the existing list
+    
+}
+ addLanguage('Python');
+addLanguage('Java');
+
+function addOptionLang(langName) {
+    const li = document.createElement('li');
+    li.appendChild(document.createTextNode(langName));
+    document.querySelector('.language').appendChild(li);
+
+}
+addOptionLang('C++');
+
+// EDIT 
+const secondLang = document.querySelector("li:nth-child(2)"); // Select the second list 
+const newli = document.createElement('li'); // Create a new list item
+newli.textContent = "Mojo";
+secondLang.replaceWith(newli);
+
+// EDIT
+const firstLang = document.querySelector("li:first-child"); 
+firstLang.outerHTML = "<li>TypeScript</li>"; // Replace the first list item with a new one
+
+// REMOVE
+
+const lastLang = document.querySelector("li:last-child"); // Select the last list item
+lastLang.remove(); // Remove the last list item
+</script>
+</html>
